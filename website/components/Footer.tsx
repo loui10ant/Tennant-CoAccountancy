@@ -1,7 +1,9 @@
 export default function Footer() {
   return (
-    <footer>
-      <p>© 2026 Tennant & Co Accountancy</p>
+    <footer className="border-t border-gray-200 py-8">
+      <div className="mx-auto max-w-7xl px-6 text-center text-sm text-gray-500">
+        © {new Date().getFullYear()} Tennant & Co Accountancy Limited
+      </div>
     </footer>
   );
 }
