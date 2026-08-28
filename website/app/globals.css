@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Buildspec §3 — colour tokens. Monochrome green + warm neutrals, one accent family. */
+  /* Sampled directly from the logo PNGs (RGB 3,63,53) rather than the earlier
+     approximate hex — see Buildspec §8 item 1. */
+  --green-900: #033f35;
+  --green-950: #033a31; /* --green-900 darkened ~8% */
+  --green-100: #ebf0ef; /* pale tint of the same hue */
+
+  --ink: #1a1a18;
+  --ink-muted: #5a5a54;
+  --paper: #ffffff;
+  --paper-alt: #f7f6f3;
+  --rule: #e3e1dc;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-paper: var(--paper);
+  --color-paper-alt: var(--paper-alt);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-rule: var(--rule);
+  --color-green-100: var(--green-100);
+  --color-green-900: var(--green-900);
+  --color-green-950: var(--green-950);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-public-sans);
+  --font-serif: var(--font-source-serif);
+
+  /* Buildspec §3 — type scale, 1.25 ratio, fluid via clamp(). */
+  --text-display: clamp(3rem, 2.35rem + 2.6vw, 4rem);
+  --text-display--line-height: 1.1;
+  --text-h1: clamp(2.25rem, 1.9rem + 1.4vw, 3rem);
+  --text-h1--line-height: 1.15;
+  --text-h2: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
+  --text-h2--line-height: 1.2;
+  --text-h3: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --text-h3--line-height: 1.3;
+  --text-body-lg: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem);
+  --text-body-lg--line-height: 1.6;
+  --text-body: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
+  --text-body--line-height: 1.65;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.5;
+  --text-label: 0.8125rem;
+  --text-label--line-height: 1.4;
+
+  /* Buildspec §3 — content max width. */
+  --container-content: 75rem; /* 1200px */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* Buildspec §3 Motion — no animation for users who've asked not to see it. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
