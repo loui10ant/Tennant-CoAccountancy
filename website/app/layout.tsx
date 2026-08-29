@@ -31,6 +31,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title,
   description,
+  verification: {
+    google: "ALyCdvppK14W0B2amTml0HbwIxHrKOBXT6MzqaTuTPQ",
+  },
   openGraph: {
     title,
     description,
