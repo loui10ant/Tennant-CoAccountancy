@@ -93,7 +93,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow="About"
                 title="Tiffany Tennant ACA"
-                lede="Qualified as a Chartered Accountant in January 2023, before founding Tennant & Co in April 2026 to offer a more personal service."
+                lede="Qualified as a Chartered Accountant in January 2023, before founding Tennant & Co in April 2026."
               />
               <div className="mt-6">
                 <LinkButton href="/about" variant="secondary">

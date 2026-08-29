@@ -7,7 +7,7 @@ export default function Footer() {
         <p>© {new Date().getFullYear()} Tennant &amp; Co Accountancy Limited</p>
         <p className="mt-1">
           Company No. 17002564 · Registered office: 4 Grovelands, Boundary
-          Way, Hemel Hempstead, Hertfordshire, United Kingdom, HP2 7TE
+          Way, Hemel Hempstead, Hertfordshire, HP2 7TE
         </p>
         <p className="mt-3">
           <Link href="/privacy" className="hover:text-green-900">

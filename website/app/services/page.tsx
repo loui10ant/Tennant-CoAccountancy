@@ -45,8 +45,9 @@ export default function ServicesPage() {
               companies, LLPs and landlords.
             </p>
             <p className="mt-3 text-body text-ink-muted">
-              What&apos;s included: day-to-day bookkeeping, and MTD for ITSA
-              bookkeeping and submissions for those affected by the new
+              What&apos;s included: day-to-day bookkeeping, as well as
+              submissions for Making Tax Digital for Income Tax Self
+              Assessment (MTD for ITSA) for those affected by the new
               digital record-keeping rules.
             </p>
           </div>
@@ -94,7 +95,7 @@ export default function ServicesPage() {
         <Section>
           <SectionHeading
             title="Ready to talk?"
-            lede="Don't see the exact service you need? Get in touch anyway — we may still be able to help."
+            lede="Don't see the exact service you need? Get in touch — we may still be able to help."
           />
           <div className="mt-6">
             <LinkButton href="/contact">Book a free consultation</LinkButton>

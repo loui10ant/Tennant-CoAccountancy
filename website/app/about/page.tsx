@@ -28,8 +28,8 @@ export default function AboutPage() {
               <div className="mt-8 max-w-[68ch] space-y-4 text-body text-ink-muted">
                 <p>
                   Tiffany started her career in accountancy in 2017, training
-                  first through AAT and then ACA, qualifying as a Chartered
-                  Accountant in January 2023.
+                  first through AAT and then ACA, qualifying as an ICAEW
+                  Chartered Accountant in January 2023.
                 </p>
                 <p>
                   She was promoted to Assistant Manager in September 2022 and
@@ -39,8 +39,9 @@ export default function AboutPage() {
                 <p>
                   Tennant & Co was founded to give Tiffany the flexibility to
                   work around family life while continuing to deliver
-                  high-quality work — and that flexibility is what allows for
-                  a more personal service than a larger practice can offer.
+                  high-quality work — and that same flexibility means more
+                  time and attention for each client than a larger practice
+                  can offer.
                 </p>
               </div>
             </div>
