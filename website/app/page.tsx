@@ -44,11 +44,7 @@ export default function Home() {
         </section>
 
         <Section alt>
-          <SectionHeading
-            eyebrow="Services"
-            title="What we do"
-            lede="Three services, done properly, rather than a long list done thinly."
-          />
+          <SectionHeading eyebrow="Services" title="What we do" />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <ServiceCard
               title="Bookkeeping"
