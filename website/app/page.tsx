@@ -78,7 +78,7 @@ export default function Home() {
             />
             <ValuePillar
               title="Flexible"
-              description="Working arrangements fit around your business, not the other way round."
+              description="Working arrangements to help fit around you and your business."
             />
             <ValuePillar
               title="Approachable"
