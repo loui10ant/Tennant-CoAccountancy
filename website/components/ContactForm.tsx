@@ -93,7 +93,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="phone" className="block text-label uppercase tracking-[0.06em] text-ink-muted">
-          Phone <span className="normal-case text-ink-muted/70">(optional)</span>
+          Phone <span className="normal-case text-ink-muted">(optional)</span>
         </label>
         <input
           id="phone"
