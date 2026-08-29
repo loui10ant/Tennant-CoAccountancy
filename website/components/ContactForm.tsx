@@ -11,33 +11,56 @@ const businessTypes = [
   "Other",
 ];
 
-export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+// Buildspec §8 item 3 — static export has no server to post to itself, so
+// submissions go straight to Web3Forms from the browser.
+const WEB3FORMS_ACCESS_KEY = "5623e84f-d6ce-4666-82fe-2d1ee28759f7";
 
-  // TODO(Buildspec §8 item 3): no backend to submit to until the contact form
-  // handling decision (third-party form service vs. a Cloudflare Pages
-  // Function) is made — the static export has no server to post to itself.
-  // This intentionally does not pretend to send the message.
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+export default function ContactForm() {
+  const [status, setStatus] = useState<"idle" | "submitting" | "submitted" | "error">("idle");
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    setStatus("submitting");
+
+    const formData = new FormData(event.currentTarget);
+    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+    formData.append("subject", "New enquiry from tennantandco.co.uk");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const result = await response.json();
+      setStatus(result.success ? "submitted" : "error");
+    } catch {
+      setStatus("error");
+    }
   }
 
-  if (submitted) {
+  if (status === "submitted") {
     return (
       <div
         role="status"
         className="rounded-lg border border-rule bg-paper-alt p-6 text-body text-ink"
       >
-        Form submission isn&apos;t connected yet — please email or call us
-        directly for now using the details above, and we&apos;ll get back to
-        you within one working day.
+        Thanks — your message has been sent. We&apos;ll get back to you
+        within one working day.
       </div>
     );
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+      <input
+        type="checkbox"
+        name="botcheck"
+        className="hidden"
+        style={{ display: "none" }}
+        tabIndex={-1}
+        autoComplete="off"
+      />
+
       <div>
         <label htmlFor="name" className="block text-label uppercase tracking-[0.06em] text-ink-muted">
           Name
@@ -111,7 +134,16 @@ export default function ContactForm() {
         />
       </div>
 
-      <Button type="submit">Send message</Button>
+      {status === "error" && (
+        <p role="alert" className="text-body text-ink">
+          Something went wrong sending your message — please email or call
+          us directly using the details above.
+        </p>
+      )}
+
+      <Button type="submit" disabled={status === "submitting"}>
+        {status === "submitting" ? "Sending…" : "Send message"}
+      </Button>
     </form>
   );
 }
