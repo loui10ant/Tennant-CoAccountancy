@@ -59,7 +59,7 @@ export default function ServicesPage() {
               Software training
             </h2>
             <p className="mt-4 text-body text-ink-muted">
-              What it is: hands-on training in Xero, QuickBooks and Sage, so
+              What it is: hands-on training on Xero, QuickBooks and Sage, so
               you can manage your own books with confidence day to day.
             </p>
             <p className="mt-3 text-body text-ink-muted">
