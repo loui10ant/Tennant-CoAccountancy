@@ -56,6 +56,8 @@ const structuredData = {
   "@type": "AccountingService",
   name: "Tennant & Co Accountancy Limited",
   url: SITE_URL,
+  logo: `${SITE_URL}/icon.png`,
+  image: `${SITE_URL}/icon.png`,
   email: "tiffany@tennantandco.co.uk",
   telephone: "+441296821478",
   address: {

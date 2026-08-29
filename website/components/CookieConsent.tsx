@@ -6,12 +6,6 @@ import Button from "@/components/Button";
 const GA_MEASUREMENT_ID = "G-Q1PD67N1PG";
 const CONSENT_KEY = "cookie-consent";
 
-declare global {
-  interface Window {
-    dataLayer: unknown[];
-  }
-}
-
 function loadGoogleAnalytics() {
   if (document.getElementById("ga-script")) return;
 
@@ -22,11 +16,11 @@ function loadGoogleAnalytics() {
   document.head.appendChild(script);
 
   window.dataLayer = window.dataLayer || [];
-  function gtag(...args: unknown[]) {
+  window.gtag = function gtag(...args: unknown[]) {
     window.dataLayer.push(args);
-  }
-  gtag("js", new Date());
-  gtag("config", GA_MEASUREMENT_ID);
+  };
+  window.gtag("js", new Date());
+  window.gtag("config", GA_MEASUREMENT_ID);
 }
 
 export default function CookieConsent() {

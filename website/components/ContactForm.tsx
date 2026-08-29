@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Button from "@/components/Button";
+import { trackEvent } from "@/lib/analytics";
 
 const businessTypes = [
   "Sole trader",
@@ -32,6 +33,9 @@ export default function ContactForm() {
         body: formData,
       });
       const result = await response.json();
+      if (result.success) {
+        trackEvent("generate_lead", { form: "contact" });
+      }
       setStatus(result.success ? "submitted" : "error");
     } catch {
       setStatus("error");
