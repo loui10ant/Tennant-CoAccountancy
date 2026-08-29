@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="border-t border-rule bg-green-100 py-8">
@@ -6,6 +8,11 @@ export default function Footer() {
         <p className="mt-1">
           Company No. 17002564 · Registered office: 4 Grovelands, Boundary
           Way, Hemel Hempstead, Hertfordshire, United Kingdom, HP2 7TE
+        </p>
+        <p className="mt-3">
+          <Link href="/privacy" className="hover:text-green-900">
+            Privacy Notice
+          </Link>
         </p>
       </div>
     </footer>
