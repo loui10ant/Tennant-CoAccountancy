@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Source_Serif_4, Public_Sans } from "next/font/google";
+import CookieConsent from "@/components/CookieConsent";
 import "./globals.css";
 
 const sourceSerif = Source_Serif_4({
@@ -85,6 +86,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         {children}
+        <CookieConsent />
       </body>
     </html>
   );

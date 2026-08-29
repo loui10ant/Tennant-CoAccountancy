@@ -233,6 +233,18 @@ export default function PrivacyPage() {
               CleanTalk and Akismet, for the sole purpose of detecting and
               blocking spam and abusive submissions.
             </P>
+            <SubHead>Website analytics</SubHead>
+            <P>
+              With your consent, we use Google Analytics to understand how
+              visitors use our website, such as which pages are viewed and
+              how visitors found the site. Google Analytics sets cookies
+              (including <code>_ga</code> and <code>_ga_*</code>) that
+              expire after up to 13 months. You can choose not to accept
+              these cookies, and can change your choice at any time using
+              the &quot;Cookie settings&quot; link in the website footer.
+              Declining does not affect your ability to use the website or
+              contact us.
+            </P>
             <P>
               We may share your personal data with other third parties,
               for example in the context of the possible sale or
@@ -244,13 +256,16 @@ export default function PrivacyPage() {
             <H2>6. Transferring personal data outside the United Kingdom</H2>
             <P>
               We do not otherwise transfer the personal data we collect
-              about you outside of the UK, with one exception: data
+              about you outside of the UK, with two exceptions. Data
               submitted through the contact form on our website is
               processed by Web3Forms, whose infrastructure may process
-              data in multiple regions, including outside the UK. Any
-              such transfer is made under appropriate safeguards,
+              data in multiple regions, including outside the UK. Where
+              you consent to analytics cookies, Google Analytics data is
+              processed by Google LLC, based in the United States. Any
+              such transfers are made under appropriate safeguards,
               including Standard Contractual Clauses, as set out in
-              Web3Forms&apos; Data Processing Agreement.
+              Web3Forms&apos; Data Processing Agreement and Google&apos;s
+              data protection terms respectively.
             </P>
 
             <H2>7. Data security</H2>
