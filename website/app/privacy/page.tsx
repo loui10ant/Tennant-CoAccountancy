@@ -222,6 +222,17 @@ export default function PrivacyPage() {
               providers to process your personal data for specified
               purposes and in accordance with our instructions.
             </P>
+            <SubHead>Our website contact form</SubHead>
+            <P>
+              When you submit an enquiry through the contact form on our
+              website, the information you provide is sent using a
+              third-party form processing service, Web3Forms (operated by
+              Web3Creative), which delivers it to us by email. Web3Forms
+              may also share the IP address and email address of anyone
+              submitting the form with its spam-prevention sub-processors,
+              CleanTalk and Akismet, for the sole purpose of detecting and
+              blocking spam and abusive submissions.
+            </P>
             <P>
               We may share your personal data with other third parties,
               for example in the context of the possible sale or
@@ -231,7 +242,16 @@ export default function PrivacyPage() {
             </P>
 
             <H2>6. Transferring personal data outside the United Kingdom</H2>
-            <P>We will not transfer the personal data we collect about you outside of the UK.</P>
+            <P>
+              We do not otherwise transfer the personal data we collect
+              about you outside of the UK, with one exception: data
+              submitted through the contact form on our website is
+              processed by Web3Forms, whose infrastructure may process
+              data in multiple regions, including outside the UK. Any
+              such transfer is made under appropriate safeguards,
+              including Standard Contractual Clauses, as set out in
+              Web3Forms&apos; Data Processing Agreement.
+            </P>
 
             <H2>7. Data security</H2>
             <P>
@@ -353,7 +373,7 @@ export default function PrivacyPage() {
                 www.tennantandco.co.uk
               </a>
             </P>
-            <P>This privacy notice was last updated on 1 April 2026.</P>
+            <P>This privacy notice was last updated on 29 August 2026.</P>
 
             <H2>11. Contact us</H2>
             <P>
